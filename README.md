@@ -134,19 +134,6 @@ http://127.0.0.1:5000
 
 ---
 
-## 🎓 Uso Educativo
-
-Este proyecto está diseñado para:
-
-✅ Clases de Flask
-✅ Prácticas de backend
-✅ Integración HTML + CSS + Python
-✅ Manejo de rutas
-✅ Uso de sesiones
-✅ Introducción a e-commerce
-
----
-
 ## 📸 Vista Previa
 
 https://mini-tienda-odpi.onrender.com/ 
@@ -155,7 +142,7 @@ https://mini-tienda-odpi.onrender.com/
 
 ## 👨‍🏫 Autor
 
-Proyecto desarrollado con fines educativos por **Eli – Docente de Programación**.
+Proyecto desarrollado con fines educativos por **Luz Eliana Martínez Ramos**.
 
 ---
 
