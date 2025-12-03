@@ -430,3 +430,144 @@ a.detail-link:hover {
 .detail-link:hover {
     background: #155aba;
 }
+
+/* ============================= */
+/* ======== MEDIA QUERIES ======== */
+/* ============================= */
+
+/* ===== TABLETS (max-width: 992px) ===== */
+@media (max-width: 992px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding: 20px;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+
+    .product-detail {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .product-detail .image-box img {
+        width: 280px;
+        height: 280px;
+    }
+
+    .info-box h2 {
+        font-size: 24px;
+    }
+
+    .price {
+        font-size: 22px;
+    }
+
+    .categories-bar {
+        justify-content: center;
+    }
+
+    main {
+        margin: 20px auto;
+    }
+}
+
+
+/* ===== MÓVILES (max-width: 600px) ===== */
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    main {
+        padding: 0 10px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card img,
+    .img-container img {
+        height: 140px;
+    }
+
+    .card img {
+        height: 150px;
+    }
+
+    .product-detail .image-box img {
+        width: 100%;
+        height: auto;
+        max-width: 260px;
+    }
+
+    .info-box h2 {
+        font-size: 20px;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+
+    .price {
+        font-size: 20px;
+    }
+
+    .button.large {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .button.secondary {
+        margin-left: 0;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cart-item img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .total {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+
+    .category-title {
+        font-size: 22px;
+    }
+
+    .empty-message {
+        font-size: 16px;
+        padding: 25px;
+    }
+}
