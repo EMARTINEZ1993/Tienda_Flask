@@ -1,86 +1,165 @@
-# Necoclik Store
+# 🛒 Mini Tienda Web con Flask
 
-Pequeña tienda demo en Flask que muestra un catálogo de productos, permite filtrar por categoría, ver detalle de producto y agregar elementos a un carrito de compras en sesión.
+Proyecto educativo desarrollado con **Flask**, que simula una **mini tienda de productos** con carrito de compras, vista de detalle y filtrado por categorías.  
+Ideal para aprendizaje de **backend con Python + Flask**, uso de **plantillas Jinja2**, sesiones y estilos con **CSS**.
 
-**Características**
-- Listado de productos desde `products.py`.
-- Filtrado por categoría (`/categoria/<category>`).
-- Página de detalle de producto (`/producto/<int:producto_id>`).
-- Carrito basado en `session` con rutas para agregar (`/agregar/<int:producto_id>`), ver (`/carrito`) y vaciar (`/vaciar`).
-- Plantillas Jinja en `templates/` y assets en `static/`.
+---
 
-**Requisitos**
-- Python 3.8+ (probado con 3.10+).
-- Flask (microframework).
+## 📌 Características
 
-Instalación rápida (PowerShell):
+✅ Listado de productos  
+✅ Vista de detalle por producto  
+✅ Carrito de compras con sesiones  
+✅ Miniaturas de productos en el carrito  
+✅ Filtro por categorías  
+✅ Plantilla base reutilizable (`base.html`)  
+✅ Estilos modernos con CSS  
+✅ Arquitectura organizada  
 
-```powershell
-# Crear y activar entorno virtual
-python -m venv .venv
-.\.venv\Scripts\Activate
+---
 
-# Instalar Flask
-pip install Flask
+## 🗂️ Estructura del Proyecto
+
 ```
 
-Ejecución
+/tu_proyecto
+│ app.py
+│ products.py
+│
+├── /static
+│     ├── styles.css
+│     └── /img
+│           audifonos.png
+│           mouse.jpg
+│           teclado.jpg
+│
+└── /templates
+base.html
+index.html
+product_detail.html
+cart.html
+categoria.html
 
-- Ejecutar directamente con Python (ya incluye `app.run(debug=True)`):
+````
 
-```powershell
+---
+
+## ⚙️ Requisitos
+
+- Python 3.8 o superior  
+- pip
+- Entorno virtual (recomendado)
+
+---
+
+## 🚀 Instalación Paso a Paso
+
+### 1️⃣ Clonar el repositorio
+
+```bash
+git clone https://github.com/tu_usuario/mini-tienda-flask.git
+cd mini-tienda-flask
+````
+
+---
+
+### 2️⃣ Crear entorno virtual
+
+```bash
+python -m venv venv
+```
+
+Activar entorno:
+
+**Windows**
+
+```bash
+venv\Scripts\activate
+```
+
+**Linux / Mac**
+
+```bash
+source venv/bin/activate
+```
+
+---
+
+### 3️⃣ Instalar Flask
+
+```bash
+pip install flask
+```
+
+---
+
+### 4️⃣ Ejecutar el proyecto
+
+```bash
 python app.py
 ```
 
-- Alternativamente, usar `flask run` (opcional):
+Abrir en el navegador:
 
-```powershell
-$env:FLASK_APP = "app.py"
-$env:FLASK_ENV = "development"
-flask run
+```
+http://127.0.0.1:5000
 ```
 
-Por defecto la aplicación se sirve en `http://127.0.0.1:5000`.
+---
 
-Rutas principales
+## 🧠 Tecnologías Usadas
 
-- `/` — Página principal con todos los productos.
-- `/categoria/<category>` — Filtrar productos por categoría.
-- `/producto/<int:producto_id>` — Detalle de producto.
-- `/agregar/<int:producto_id>` — Agregar producto al carrito (usa `session`).
-- `/carrito` — Ver carrito.
-- `/vaciar` — Vaciar carrito.
+* Python
+* Flask
+* HTML5
+* CSS3
+* Jinja2
+* Sesiones con Flask
 
-Estructura del proyecto
+---
 
-- `app.py` — Aplicación Flask y definiciones de rutas.
-- `products.py` — Lista de diccionarios `products` con los productos de ejemplo.
-- `templates/` — Plantillas Jinja: `base.html`, `index.html`, `categoria.html`, `product_detail.html`, `cart.html`.
-- `static/` — CSS e imágenes (ej.: `styles.css`, `img/`).
+## 🛍️ Funcionamiento del Proyecto
 
-Notas y recomendaciones
+* La página principal muestra los productos.
+* Cada producto tiene un botón **"Ver detalle"**.
+* Desde el detalle se puede **agregar al carrito**.
+* El carrito muestra:
 
-- La `secret_key` está definida en `app.py` como una cadena fija. Para producción, moverla a una variable de entorno y no incluirla en el repositorio.
-- No hay `requirements.txt` incluido. Para generar uno después de instalar dependencias:
+  * Miniatura del producto
+  * Nombre
+  * Precio
+  * Total de la compra
+* Se puede vaciar el carrito completamente.
+* Las categorías permiten filtrar productos.
 
-```powershell
-pip freeze > requirements.txt
-```
+---
 
-- Los precios en `products.py` están en números enteros; si necesitas formateos o moneda distinta, ajustar la plantilla o los datos.
+## 🎓 Uso Educativo
 
-- Las imágenes referenciadas en `products.py` usan rutas en `/static/img/` (asegúrate de que las imágenes existan en esa carpeta).
+Este proyecto está diseñado para:
 
-Posibles mejoras
+✅ Clases de Flask
+✅ Prácticas de backend
+✅ Integración HTML + CSS + Python
+✅ Manejo de rutas
+✅ Uso de sesiones
+✅ Introducción a e-commerce
 
-- Añadir manejo de cantidades en el carrito (actualmente agrega el id por cada clic).
-- Añadir persistencia (base de datos) en lugar de lista en memoria para los productos.
-- Añadir autenticación de usuarios y persistencia del carrito por usuario.
+---
 
-**Autor**
+## 📸 Vista Previa
 
-- Ingeniera Luz Eliana Martinez
+https://mini-tienda-odpi.onrender.com/ 
 
-Contacto y licencia
+---
 
-Proyecto de ejemplo. Modifica libremente para aprendizaje y pruebas.
+## 👨‍🏫 Autor
+
+Proyecto desarrollado con fines educativos por **Eli – Docente de Programación**.
+
+---
+
+## 📄 Licencia: Este proyecto es de uso libre para fines educativos.
+
+
+
